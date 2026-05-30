@@ -731,8 +731,22 @@ a.hotel-tag:hover { text-decoration: underline; }
 @media (max-width: 640px) {
   nav a { padding: 0.85rem 0.7rem; font-size: 0.72rem; }
   .card-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-  .timeline::before { left: 1.5rem; }
-  .timeline-dot { width: 3rem; }
+
+  /* Collapse timeline to single column */
+  .timeline::before { display: none; }
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .tl-pip { display: none; }
+  .tl-date {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding-top: 0;
+  }
+  .tl-cal { font-size: 0.85rem; }
 }
 @media (max-width: 480px) {
   .day-img {
