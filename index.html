@@ -677,6 +677,14 @@
   tick();
   setInterval(tick, 1000);
 
+  // Mobile tap toggle for group overlay
+  if (window.matchMedia('(hover: none)').matches) {
+    const wrap = document.getElementById('photo-group-wrap');
+    const hint = document.querySelector('.photo-hint span');
+    if (hint) hint.textContent = '· tap to meet everyone';
+    wrap.addEventListener('click', () => wrap.classList.toggle('active'));
+  }
+
   // Accordion
   document.querySelectorAll('.accordion-trigger').forEach(btn => {
     btn.addEventListener('click', () => {
