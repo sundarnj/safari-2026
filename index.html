@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solai's 60th Birthday Safari · Kenya 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#hero">Home</a>
+  <a href="#itinerary">Itinerary</a>
+  <a href="#flights">Flights</a>
+  <a href="#hotels">Hotels</a>
+  <a href="#visa">Visa</a>
+  <a href="#packing">Packing</a>
+  <a href="#health">Health</a>
+  <a href="#weather">Weather</a>
+  <a href="#big5">Big Five</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <svg class="silhouette" viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
+    <g fill="#F5E6C8">
+      <!-- Ground -->
+      <rect x="0" y="215" width="1200" height="5"/>
+
+      <!-- Acacia tree left -->
+      <rect x="75" y="130" width="10" height="85"/>
+      <polygon points="50,130 85,60 120,130"/>
+      <polygon points="38,110 85,55 132,110"/>
+      <polygon points="45,95 85,42 125,95"/>
+
+      <!-- Giraffe (~x=340) -->
+      <g transform="translate(340,20)">
+        <!-- legs -->
+        <rect x="18" y="138" width="9" height="62"/>
+        <rect x="32" y="138" width="9" height="62"/>
+        <rect x="52" y="138" width="9" height="62"/>
+        <rect x="66" y="138" width="9" height="62"/>
+        <!-- body -->
+        <path d="M15,90 Q20,60 45,55 Q70,50 78,65 L82,140 L12,140 Z"/>
+        <!-- neck -->
+        <path d="M32,92 Q34,45 40,18 Q44,8 50,6 Q56,4 58,12 Q62,38 60,90 Z"/>
+        <!-- head -->
+        <ellipse cx="48" cy="12" rx="12" ry="8"/>
+        <!-- ossicones -->
+        <rect x="42" y="2" width="4" height="10" rx="2"/>
+        <rect x="52" y="1" width="4" height="9" rx="2"/>
+        <!-- snout bump -->
+        <ellipse cx="58" cy="15" rx="5" ry="3"/>
+        <!-- tail -->
+        <path d="M82,80 Q96,85 94,105 Q92,115 86,118" stroke="#F5E6C8" stroke-width="3" fill="none"/>
+      </g>
+
+      <!-- Elephant (~x=580) -->
+      <g transform="translate(580,80)">
+        <!-- legs -->
+        <rect x="12" y="90" width="18" height="50" rx="4"/>
+        <rect x="34" y="90" width="18" height="50" rx="4"/>
+        <rect x="68" y="90" width="18" height="50" rx="4"/>
+        <rect x="90" y="90" width="18" height="50" rx="4"/>
+        <!-- body -->
+        <ellipse cx="65" cy="75" rx="55" ry="38"/>
+        <!-- head -->
+        <ellipse cx="18" cy="55" rx="28" ry="25"/>
+        <!-- ear -->
+        <ellipse cx="4" cy="50" rx="14" ry="20"/>
+        <!-- trunk -->
+        <path d="M12,72 Q2,95 8,115 Q12,128 20,125 Q26,122 22,108 Q16,95 22,80" />
+        <!-- tusk -->
+        <path d="M22,68 Q10,78 14,90" stroke="#F5E6C8" stroke-width="3" fill="none"/>
+        <!-- tail -->
+        <path d="M118,65 Q130,70 128,85" stroke="#F5E6C8" stroke-width="3" fill="none"/>
+      </g>
+
+      <!-- Lion (~x=820) -->
+      <g transform="translate(820,110)">
+        <!-- legs -->
+        <rect x="10" y="72" width="10" height="42" rx="3"/>
+        <rect x="25" y="72" width="10" height="42" rx="3"/>
+        <rect x="90" y="72" width="10" height="42" rx="3"/>
+        <rect x="105" y="72" width="10" height="42" rx="3"/>
+        <!-- body -->
+        <ellipse cx="75" cy="60" rx="48" ry="28"/>
+        <!-- mane -->
+        <circle cx="28" cy="48" r="30"/>
+        <!-- head -->
+        <circle cx="28" cy="42" r="20"/>
+        <!-- snout -->
+        <ellipse cx="18" cy="48" rx="10" ry="7"/>
+        <!-- ear -->
+        <polygon points="10,28 18,10 26,28"/>
+        <polygon points="30,26 36,10 42,26"/>
+        <!-- tail -->
+        <path d="M122,48 Q148,42 150,58 Q152,72 138,76" stroke="#F5E6C8" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="136" cy="80" r="7"/>
+      </g>
+
+      <!-- Acacia tree right -->
+      <rect x="1063" y="108" width="11" height="107"/>
+      <polygon points="1035,108 1068,32 1101,108"/>
+      <polygon points="1022,88 1068,26 1114,88"/>
+      <polygon points="1030,72 1068,14 1106,72"/>
+    </g>
+  </svg>
+
+  <div style="position:relative;z-index:1;">
+    <p class="hero-tag">Kenya · August 2026</p>
+    <h1>Solai's 60th Birthday Safari</h1>
+    <p class="subtitle">Seven of us. One unforgettable adventure in the heart of Africa.</p>
+
+    <div class="countdown" id="countdown">
+      <div class="countdown-unit"><span class="num" id="cd-days">--</span><span class="label">Days</span></div>
+      <div class="countdown-unit"><span class="num" id="cd-hrs">--</span><span class="label">Hours</span></div>
+      <div class="countdown-unit"><span class="num" id="cd-min">--</span><span class="label">Minutes</span></div>
+      <div class="countdown-unit"><span class="num" id="cd-sec">--</span><span class="label">Seconds</span></div>
+    </div>
+    <p style="margin-top:0.8rem;font-family:sans-serif;font-size:0.8rem;opacity:0.6;">Until we all land in Nairobi (Aug 20, 2026)</p>
+  </div>
+</section>
+
+<!-- ── FAMILY PHOTO + GROUP HOVER ── -->
+<div id="photo-group-wrap">
+  <img src="family_picture.png" alt="The Solai family — Kenya 2026">
+  <div class="photo-hint">The crew, ready for adventure 🌍 <span>· hover to meet everyone</span></div>
+  <div id="group-overlay">
+    <div class="section-inner">
+      <h2 class="section-title" style="color:var(--sand);">The Group</h2>
+      <p class="section-subtitle" style="color:rgba(245,230,200,0.75);">Seven family members, one incredible trip.</p>
+      <div class="card-grid">
+        <div class="card"><span class="emoji">🦁</span><h3>Solai</h3><p class="role">King of the Jungle for the Week</p></div>
+        <div class="card"><span class="emoji">💡</span><h3>Sathu</h3><p class="role">Who knew going on Safari would be her idea?</p></div>
+        <div class="card"><span class="emoji">🐾</span><h3>Devanei</h3><p class="role">Lifelong animal lover</p></div>
+        <div class="card"><span class="emoji">🦩</span><h3>Sundar</h3><p class="role">Hoping to see a flamingo to learn to stand on one leg</p></div>
+        <div class="card"><span class="emoji">🌱</span><h3>Sweta</h3><p class="role">Soon-to-be animal lover</p></div>
+        <div class="card"><span class="emoji">🍖</span><h3>Sanker</h3><p class="role">Used to eating animals, not watching them</p></div>
+        <div class="card"><span class="emoji">🛍️</span><h3>Devi</h3><p class="role">Ready to shop for animal-themed outfits</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ITINERARY ── -->
+<section id="itinerary">
+  <div class="section-inner">
+    <h2 class="section-title">Itinerary</h2>
+    <p class="section-subtitle">6 Days Naivasha / Masai Mara Private Safari — Axis Africa Safaris</p>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="tl-pip"><span class="dot"></span></div>
+        <div class="tl-date"><span class="tl-day">Thu</span><span class="tl-cal">Aug 20</span></div>
+        <div class="timeline-content">
+          <h3>Day 1 · Arrival in Nairobi</h3>
+          <img class="day-img" src="nairobi.webp" alt="Nairobi">
+          <p>All seven travelers land in Nairobi throughout the morning. Check in and rest — it's Day 1 of the adventure! That evening, we also celebrate Sundar &amp; Sweta's 3rd wedding anniversary 🎉 with a special dinner.</p>
+          <a class="hotel-tag" href="https://maps.app.goo.gl/vqHtgxgPnW1PLFyY8" target="_blank">🏨 Hyatt Place Nairobi Westlands</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-pip"><span class="dot"></span></div>
+        <div class="tl-date"><span class="tl-day">Fri</span><span class="tl-cal">Aug 21</span></div>
+        <div class="timeline-content">
+          <h3>Day 2 · Nairobi → Naivasha</h3>
+          <img class="day-img" src="boat_safari.jpg" alt="Boat safari on Lake Naivasha">
+          <p>Morning pick-up, brief safari orientation, then drive to Lake Naivasha via the breathtaking Great Rift Valley viewpoint (≈3 hrs). Afternoon sunset boat ride among hippos and a walk on Crescent Island.</p>
+          <a class="hotel-tag" href="https://maps.app.goo.gl/BQXseCyikoaVo38LA" target="_blank">🏨 Lake Naivasha Resort</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-pip"><span class="dot"></span></div>
+        <div class="tl-date"><span class="tl-day">Sat</span><span class="tl-cal">Aug 22</span></div>
+        <div class="timeline-content">
+          <h3>Day 3 · Naivasha → Masai Mara</h3>
+          <img class="day-img" src="porini.webp" alt="Porini Mara Camp">
+          <p>After breakfast, a scenic 5-hour drive through rolling green plains into the Maasai Mara. Check into camp inside the Ol Kinyei Conservancy, then an afternoon game drive followed by a night game drive to spot nocturnal wildlife.</p>
+          <a class="hotel-tag" href="https://maps.app.goo.gl/fU4HGW54xXN9nppS7" target="_blank">🏕️ Porini Mara Camp</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-pip"><span class="dot"></span></div>
+        <div class="tl-date"><span class="tl-day">Sun</span><span class="tl-cal">Aug 23</span></div>
+        <div class="timeline-content">
+          <h3>Day 4 · Game Drives at the Conservancy</h3>
+          <img class="day-img" src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?w=400&q=85" alt="Elephants on game drive">
+          <p>A full day exploring Naboisho and Ol Kinyei Conservancy at your own pace. Game drives guaranteed throughout the day and evening — no crowds, pure wilderness.</p>
+          <a class="hotel-tag" href="https://maps.app.goo.gl/fU4HGW54xXN9nppS7" target="_blank">🏕️ Porini Mara Camp</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-pip"><span class="dot"></span></div>
+        <div class="tl-date"><span class="tl-day">Mon</span><span class="tl-cal">Aug 24</span></div>
+        <div class="timeline-content">
+          <h3>Day 5 · Masai Mara Extended Game Drive</h3>
+          <img class="day-img" src="river_crossing.jpg" alt="Wildebeest river crossing, Masai Mara">
+          <p>Early breakfast then a game drive en route to Ashnil Mara Camp. After check-in and lunch, an afternoon drive through the Masai Mara National Park hunting for the Big Five — lions, elephants, leopards, buffalo, and rhino.</p>
+          <a class="hotel-tag" href="https://maps.app.goo.gl/EXLJLoj3uqaTjTqf7" target="_blank">🏕️ Ashnil Mara Camp</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-pip"><span class="dot" style="background:var(--ochre-light);outline-color:var(--ochre-light);"></span></div>
+        <div class="tl-date"><span class="tl-day">Tue</span><span class="tl-cal">Aug 25</span></div>
+        <div class="timeline-content">
+          <h3>Day 6 · 🎈 Hot Air Balloon + Full Day Drive</h3>
+          <img class="day-img" src="https://images.unsplash.com/photo-1586491157403-f3407cb8ff5b?w=400&q=85" alt="Hot air balloon over Masai Mara at dawn">
+          <p><strong>06:15</strong> — Balloon takes off at dawn for a 1-hour flight over the Mara. Bird's-eye view of the Great Rift Valley, followed by a champagne breakfast in the bush.</p>
+          <p>Then a full day game drive through the heart of the Mara — vast herds of wildebeest and zebras, possible Mara River crossing (July–September season), picnic lunch on the savanna.</p>
+          <a class="hotel-tag" href="https://maps.app.goo.gl/EXLJLoj3uqaTjTqf7" target="_blank">🏕️ Ashnil Mara Camp</a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-pip"><span class="dot"></span></div>
+        <div class="tl-date"><span class="tl-day">Wed</span><span class="tl-cal">Aug 26</span></div>
+        <div class="timeline-content">
+          <h3>Day 7 · Maasai Village + Return to Nairobi</h3>
+          <img class="day-img" src="https://images.unsplash.com/photo-1580394640019-00d34094ae13?w=400&q=85" alt="Maasai woman in traditional dress, Kenya">
+          <p>After breakfast, an immersive visit to a traditional Maasai village — vibrant traditions, intricate beadwork, dances and songs. Check out ≈9:00 am, then drive back to Nairobi. All flights depart Nairobi in the late evening.</p>
+          <span class="hotel-tag">✈️ Departure Night</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FLIGHTS ── -->
+<section id="flights">
+  <div class="section-inner">
+    <h2 class="section-title">Flights</h2>
+    <div class="flight-grid">
+
+      <!-- Solai & Devanei -->
+      <div class="flight-card">
+        <div class="flight-card-header">
+          <strong>Solai &amp; Devanei</strong>
+          <span class="from-city">New York (JFK)</span>
+        </div>
+        <div class="flight-leg-v2">
+          <img class="leg-logo" src="https://www.gstatic.com/flights/airline_logos/70px/KQ.png" alt="Kenya Airways">
+          <div class="leg-detail">
+            <div class="leg-meta"><span class="leg-dir outbound">Outbound</span><span class="leg-fnum">KQ 3</span></div>
+            <div class="leg-route">
+              <div class="leg-point"><span class="leg-iata">JFK</span><span class="leg-time">1:45 pm</span><span class="leg-date">Aug 19</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point"><span class="leg-iata">NBO</span><span class="leg-time">10:45 am</span><span class="leg-date">Aug 20</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="flight-leg-v2">
+          <img class="leg-logo" src="https://www.gstatic.com/flights/airline_logos/70px/KQ.png" alt="Kenya Airways">
+          <div class="leg-detail">
+            <div class="leg-meta"><span class="leg-dir return-leg">Return</span><span class="leg-fnum">KQ 2</span></div>
+            <div class="leg-route">
+              <div class="leg-point"><span class="leg-iata">NBO</span><span class="leg-time">11:35 pm</span><span class="leg-date">Aug 26</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point"><span class="leg-iata">JFK</span><span class="leg-time">7:35 am</span><span class="leg-date">Aug 27</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sundar & Sweta -->
+      <div class="flight-card">
+        <div class="flight-card-header">
+          <strong>Sundar &amp; Sweta</strong>
+          <span class="from-city">London (LHR)</span>
+        </div>
+        <div class="flight-leg-v2">
+          <img class="leg-logo" src="https://www.gstatic.com/flights/airline_logos/70px/BA.png" alt="British Airways">
+          <div class="leg-detail">
+            <div class="leg-meta"><span class="leg-dir outbound">Outbound</span><span class="leg-fnum">BA 63</span></div>
+            <div class="leg-route">
+              <div class="leg-point"><span class="leg-iata">LHR</span><span class="leg-time">7:35 pm</span><span class="leg-date">Aug 19</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point"><span class="leg-iata">NBO</span><span class="leg-time">6:15 am</span><span class="leg-date">Aug 20</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="flight-leg-v2">
+          <img class="leg-logo" src="https://www.gstatic.com/flights/airline_logos/70px/BA.png" alt="British Airways">
+          <div class="leg-detail">
+            <div class="leg-meta"><span class="leg-dir return-leg">Return</span><span class="leg-fnum">BA 64</span></div>
+            <div class="leg-route">
+              <div class="leg-point"><span class="leg-iata">NBO</span><span class="leg-time">10:55 pm</span><span class="leg-date">Aug 26</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point"><span class="leg-iata">LHR</span><span class="leg-time">6:15 am</span><span class="leg-date">Aug 27</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sathu -->
+      <div class="flight-card">
+        <div class="flight-card-header">
+          <strong>Sathu</strong>
+          <span class="from-city">Singapore (SIN)</span>
+        </div>
+        <div class="flight-leg-v2">
+          <img class="leg-logo" src="https://www.gstatic.com/flights/airline_logos/70px/6E.png" alt="IndiGo">
+          <div class="leg-detail">
+            <div class="leg-meta"><span class="leg-dir outbound">Outbound</span><span class="leg-fnum">6E 1012 + 1853</span></div>
+            <div class="leg-route">
+              <div class="leg-point"><span class="leg-iata">SIN</span><span class="leg-time">7:45 pm</span><span class="leg-date">Aug 19</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point leg-via"><span class="leg-iata">BOM</span><span class="leg-time">via</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point"><span class="leg-iata">NBO</span><span class="leg-time">5:40 am</span><span class="leg-date">Aug 20</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="flight-leg-v2">
+          <img class="leg-logo" src="https://www.gstatic.com/flights/airline_logos/70px/AF.png" alt="Air France">
+          <div class="leg-detail">
+            <div class="leg-meta"><span class="leg-dir return-leg">Return</span><span class="leg-fnum">AF 829 + AF 2</span></div>
+            <div class="leg-route">
+              <div class="leg-point"><span class="leg-iata">NBO</span><span class="leg-time">11:05 pm</span><span class="leg-date">Aug 26</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point leg-via"><span class="leg-iata">CDG</span><span class="leg-time">via</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point"><span class="leg-iata">JFK</span><span class="leg-time">10:40 am</span><span class="leg-date">Aug 27</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="flight-note">💡 Sathu arrives at 5:40 am — close to Sanker &amp; Devi's landing at 5:25 am. Great opportunity to share an airport transfer to the hotel!</div>
+      </div>
+
+      <!-- Sanker & Devi -->
+      <div class="flight-card">
+        <div class="flight-card-header">
+          <strong>Sanker &amp; Devi</strong>
+          <span class="from-city">Dubai (DXB)</span>
+        </div>
+        <div class="flight-leg-v2">
+          <img class="leg-logo" src="https://www.gstatic.com/flights/airline_logos/70px/EK.png" alt="Emirates">
+          <div class="leg-detail">
+            <div class="leg-meta"><span class="leg-dir outbound">Outbound</span><span class="leg-fnum">EK 717</span></div>
+            <div class="leg-route">
+              <div class="leg-point"><span class="leg-iata">DXB</span><span class="leg-time">1:20 am</span><span class="leg-date">Aug 20</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point"><span class="leg-iata">NBO</span><span class="leg-time">5:25 am</span><span class="leg-date">Aug 20</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="flight-leg-v2">
+          <img class="leg-logo" src="https://www.gstatic.com/flights/airline_logos/70px/EK.png" alt="Emirates">
+          <div class="leg-detail">
+            <div class="leg-meta"><span class="leg-dir return-leg">Return</span><span class="leg-fnum">EK 722</span></div>
+            <div class="leg-route">
+              <div class="leg-point"><span class="leg-iata">NBO</span><span class="leg-time">10:45 pm</span><span class="leg-date">Aug 26</span></div>
+              <div class="leg-connector"><span class="leg-plane">✈</span><div class="leg-line"></div></div>
+              <div class="leg-point"><span class="leg-iata">DXB</span><span class="leg-time">4:50 am</span><span class="leg-date">Aug 27</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── HOTELS ── -->
+<section id="hotels">
+  <div class="section-inner">
+    <h2 class="section-title">Where We're Staying</h2>
+    <p class="section-subtitle">All accommodations are booked. Safari nights are full board (all meals included).</p>
+    <div class="hotel-grid">
+      <div class="hotel-card">
+        <div class="hotel-img"><img src="hyatt.webp" alt="Hyatt Place Nairobi Westlands"></div>
+        <div class="dates">Aug 20 · Arrival Night</div>
+        <h3><a href="https://maps.app.goo.gl/vqHtgxgPnW1PLFyY8" target="_blank">Hyatt Place Nairobi Westlands</a></h3>
+        <p>Our first night together in Nairobi before the safari kicks off.</p>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-img"><img src="lake_naivasha_resort.jpg" alt="Lake Naivasha Resort"></div>
+        <div class="dates">Aug 21 · Night 2</div>
+        <h3><a href="https://maps.app.goo.gl/BQXseCyikoaVo38LA" target="_blank">Lake Naivasha Resort</a></h3>
+        <p>Lakeside resort set on the shores of Lake Naivasha — hippos just steps away. Full board.</p>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-img"><img src="porini.webp" alt="Porini Mara Camp"></div>
+        <div class="dates">Aug 22–23 · Nights 3–4</div>
+        <h3><a href="https://maps.app.goo.gl/fU4HGW54xXN9nppS7" target="_blank">Porini Mara Camp</a></h3>
+        <p>Intimate tented camp inside Ol Kinyei Conservancy — exclusive game drives with no mass-tourism crowds. Full board.</p>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-img"><img src="ashnil.jpg" alt="Ashnil Mara Camp"></div>
+        <div class="dates">Aug 24–25 · Nights 5–6</div>
+        <h3><a href="https://maps.app.goo.gl/EXLJLoj3uqaTjTqf7" target="_blank">Ashnil Mara Camp</a></h3>
+        <p>Comfortable lodge at the edge of the Masai Mara National Park. Base camp for our balloon safari day. Full board.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VISA ── -->
+<section id="visa">
+  <div class="section-inner">
+    <h2 class="section-title">Visa &amp; Entry Requirements</h2>
+    <p class="section-subtitle">Entry rules vary by passport. Please check your situation below.</p>
+    <div class="visa-grid">
+      <div class="visa-card required">
+        <span class="action-badge">⚠ Action Required</span>
+        <h3>Kenya ETA Needed</h3>
+        <p>The following travelers must apply online before departure:</p>
+        <ul>
+          <li>Solai (US passport)</li>
+          <li>Sathu (US passport)</li>
+          <li>Sundar (US passport)</li>
+          <li>Devanei (US passport)</li>
+          <li>Devi (Indian passport)</li>
+        </ul>
+        <p style="margin-top:0.7rem;">Apply at: <a href="https://etakenya.go.ke" target="_blank">etakenya.go.ke</a></p>
+      </div>
+      <div class="visa-card exempt">
+        <h3>✓ No ETA Required</h3>
+        <p>Malaysian passport holders receive a visa on arrival (or may be visa-exempt). Please confirm current requirements with the Kenya Embassy or your airline.</p>
+        <ul style="margin-top:0.5rem;">
+          <li>Sweta (Malaysian passport)</li>
+          <li>Sanker (Malaysian passport)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PACKING ── -->
+<section id="packing">
+  <div class="section-inner">
+    <h2 class="section-title">Packing List</h2>
+    <p class="section-subtitle">Guidance from our safari guide at Axis Africa Safaris. Click to expand each category.</p>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>👕 Clothing</span><span class="chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul>
+          <li>Comfortable warm layers — mornings in an open vehicle can be cold</li>
+          <li>Light clothing: shorts, T-shirts, tank tops for midday heat</li>
+          <li>Hat or cap for sun (less essential inside the vehicle, but handy)</li>
+          <li>Light fleece or jacket for early morning drives</li>
+          <li>Neutral/earth tones preferred (avoid bright white)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>👟 Footwear</span><span class="chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul>
+          <li>Comfortable shoes for sitting in a vehicle and short walks</li>
+          <li>Thick soles recommended — acacia thorns on the ground</li>
+          <li>Sandals fine for camp; closed shoes better for bush walks</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>☀️ Sun Protection &amp; Hygiene</span><span class="chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul>
+          <li>High-SPF sunscreen — you're sitting on the Equator</li>
+          <li>Sunglasses (wraparound style ideal)</li>
+          <li>After-sun lotion</li>
+          <li>Wet wipes — camps do not provide them</li>
+          <li>Mosquito repellent (DEET-based or equivalent)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>🔦 Electronics &amp; Adapters</span><span class="chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul>
+          <li><strong>Flashlight / torch</strong> — essential at Masai Mara camp where the generator turns off at night</li>
+          <li>Power bank — charge your devices during the day</li>
+          <li><strong>UK plug adapter (Type G)</strong> — Kenya uses British 3-pin sockets, 220–240V / 50Hz</li>
+          <li>Camera or camcorder with a large memory card</li>
+          <li>Kenya SIM: Safaricom or Airtel available at the airport on arrival</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>📄 Documents</span><span class="chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul>
+          <li>Passport (valid for at least 6 months beyond Aug 2026)</li>
+          <li>Kenya ETA confirmation printout (where applicable)</li>
+          <li>Travel insurance documents</li>
+          <li>Flight confirmation printouts</li>
+          <li>Yellow Fever vaccination certificate if required by your origin country</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>💊 Health &amp; Medicines</span><span class="chevron">▼</span>
+      </button>
+      <div class="accordion-body">
+        <ul>
+          <li>Prescribed malaria prophylaxis (start before travel — see Health section)</li>
+          <li>Anti-diarrheal tablets (e.g. Imodium)</li>
+          <li>Oral rehydration salts</li>
+          <li>Antihistamines</li>
+          <li>Motion sickness tablets (long drives on dirt roads)</li>
+          <li>Personal prescription medications — bring extra supply</li>
+          <li>Pain relievers (paracetamol / ibuprofen)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── HEALTH ── -->
+<section id="health">
+  <div class="section-inner">
+    <h2 class="section-title">Health Preparation</h2>
+    <p class="section-subtitle">Consult a travel medicine clinic at least 6–8 weeks before departure for personalised advice.</p>
+    <div class="health-grid">
+      <div class="health-card">
+        <div class="icon">💉</div>
+        <h3>Recommended Vaccinations</h3>
+        <ul>
+          <li>Yellow Fever (required if arriving from endemic country)</li>
+          <li>Typhoid</li>
+          <li>Hepatitis A &amp; B</li>
+          <li>Tetanus / Diphtheria</li>
+          <li>Rabies (optional — for extended bush time)</li>
+          <li>Routine vaccines up to date (MMR, flu)</li>
+        </ul>
+      </div>
+      <div class="health-card">
+        <div class="icon">🦟</div>
+        <h3>Malaria Prophylaxis</h3>
+        <ul>
+          <li>Masai Mara is a malaria zone — prevention is important</li>
+          <li>Common options: Malarone (Atovaquone/Proguanil) or Doxycycline</li>
+          <li>Start Malarone 1–2 days before travel; Doxycycline 1–2 days before</li>
+          <li>August is dry season — lower risk, but don't skip it</li>
+          <li>Use mosquito repellent every evening</li>
+        </ul>
+      </div>
+      <div class="health-card">
+        <div class="icon">🧳</div>
+        <h3>Medicines to Pack</h3>
+        <ul>
+          <li>Anti-diarrheal (Imodium)</li>
+          <li>Oral rehydration salts</li>
+          <li>Antihistamines</li>
+          <li>Motion sickness tablets</li>
+          <li>Pain relievers</li>
+          <li>All personal prescriptions + extra supply</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WEATHER ── -->
+<section id="weather">
+  <div class="section-inner">
+    <h2 class="section-title">Weather in Kenya — August</h2>
+    <p class="section-subtitle">We're going at the best possible time. August is peak dry season and the height of the Great Migration.</p>
+    <div class="weather-grid">
+      <div class="weather-card">
+        <div class="w-icon">🌡️</div>
+        <h3>Temperature</h3>
+        <p>15–25°C (59–77°F) in the Mara. Warm midday, cool mornings and evenings — bring layers for the open vehicle.</p>
+      </div>
+      <div class="weather-card">
+        <div class="w-icon">☀️</div>
+        <h3>Dry Season</h3>
+        <p>Very little rain. Excellent visibility. Wildlife concentrates around rivers and water sources, making sightings easier.</p>
+      </div>
+      <div class="weather-card">
+        <div class="w-icon">🦓</div>
+        <h3>Great Migration</h3>
+        <p>July–September is prime wildebeest migration season. We have a real chance of watching the dramatic Mara River crossings.</p>
+      </div>
+      <div class="weather-card">
+        <div class="w-icon">🎈</div>
+        <h3>Perfect Balloon Weather</h3>
+        <p>Calm, clear August mornings are ideal for hot air ballooning — our Day 6 sunrise flight couldn't be better timed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BIG FIVE ── -->
+<section id="big5">
+  <div class="section-inner">
+    <h2 class="section-title">Meet the Big Five</h2>
+    <p class="section-subtitle">The Masai Mara is one of the best places on Earth to see all five. Keep your eyes open.</p>
+    <div class="big5-grid">
+      <div class="big5-card">
+        <div class="animal">🦁</div>
+        <h3>Lion</h3>
+        <p>Apex predator. Usually found resting in the shade or on rocky outcrops. The Masai Mara has one of Africa's densest lion populations.</p>
+        <span class="rarity">Common sighting</span>
+      </div>
+      <div class="big5-card">
+        <div class="animal">🐘</div>
+        <h3>Elephant</h3>
+        <p>The largest land animal on Earth. Families roam the conservancies daily, led by a matriarch with decades of wisdom.</p>
+        <span class="rarity">Common sighting</span>
+      </div>
+      <div class="big5-card">
+        <div class="animal">🐆</div>
+        <h3>Leopard</h3>
+        <p>The elusive one. Nocturnal and solitary, often spotted draped in the branches of trees. Your night drives improve the odds considerably.</p>
+        <span class="rarity">Elusive — lucky sighting</span>
+      </div>
+      <div class="big5-card">
+        <div class="animal">🐃</div>
+        <h3>Buffalo</h3>
+        <p>Deceptively dangerous — considered the most unpredictable of the Big Five. Massive herds of thousands graze the Mara plains.</p>
+        <span class="rarity">Common sighting</span>
+      </div>
+      <div class="big5-card">
+        <div class="animal">🦏</div>
+        <h3>Rhino</h3>
+        <p>The rarest of the five. Critically endangered. Any sighting in the Mara conservancies is a genuine privilege — fingers crossed.</p>
+        <span class="rarity">Rare — very lucky sighting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-title">Axis Africa Safaris</div>
+  <p>Cianda House, Koinange Street, Suite 904 · Nairobi, Kenya</p>
+  <p>Lucy Precious (Tour Consultant) · <a href="tel:+254758078078">+254 758 078078</a> · <a href="mailto:info@axisafricasafaris.com">info@axisafricasafaris.com</a></p>
+  <p><a href="https://www.axisafricasafaris.com" target="_blank">www.axisafricasafaris.com</a></p>
+  <p class="footer-sub">Made with love for Solai's 60th · Kenya 2026 🌍</p>
+</footer>
+
+<script>
+  // Countdown to Aug 20, 2026 (first arrival in Nairobi)
+  const target = new Date('2026-08-20T05:00:00Z');
+  function tick() {
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML = '<div style="font-size:1.2rem;padding:0.5rem;">We\'re in Kenya! 🦁</div>';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent = d;
+    document.getElementById('cd-hrs').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-min').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-sec').textContent = String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // Accordion
+  document.querySelectorAll('.accordion-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const body = btn.nextElementSibling;
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      body.classList.toggle('open', !open);
+    });
+  });
+</script>
+</body>
+</html>
